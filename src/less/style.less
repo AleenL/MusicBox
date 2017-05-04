@@ -1,0 +1,473 @@
+ @base_height:100px;
+ @header_height:45px;
+
+
+ body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin:0;padding:0;border:0;} 
+.back{
+	width:100%;
+    background: #223;
+	.start{
+		background:url(http://upload-images.jianshu.io/upload_images/3257837-f1b71ce65b853d3a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) repeat-x;
+        background-size: 100% 100%;
+        animation:moving 100s linear 0.8s infinite normal none;
+        overflow: hidden;
+        opacity: 0.4;
+        z-index:1;
+        width:100%;
+        position: absolute;
+        left:0px;
+        top:0px;
+        background-color: #000;
+	}
+	.moon{
+		background: url(http://upload-images.jianshu.io/upload_images/3257837-3dce0bd6b2b5e6d5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) no-repeat 100% 100%;
+        background-blend-mode:lighten;
+        background-size: 100%;
+        z-index:99;
+        top:130px;
+        left:80%;
+        width:100px;
+        height:100px;
+        position: absolute;
+	}
+	.back-ground{
+		#bear{
+			
+		}
+		.bear.running{
+			animation:bear-run 0.8s steps(1) 0s infinite normal none;
+    		-webkit-animation:bear-run 0.8s steps(1) 0s infinite normal none;
+    		-moz-animation:bear-run 0.8s steps(1) 0s infinite normal none;
+    		-o-animation:bear-run 0.8s steps(1) 0s infinite normal none;
+		}
+		.bear{
+			width:200px;
+			height:100px;
+			left:-20%;
+        	bottom:20px;
+			position: absolute;
+			margin-left: -3.125em;
+			z-index: 999;
+			background: url("http://upload-images.jianshu.io/upload_images/3257837-e40a2c0d9c65dbc1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240") 0 0 no-repeat;
+			background-size: 100em 100%;
+			opacity: 1;
+			transition:opacity 0.4s linear 0.6s;
+        	-moz-transition:opacity 0.4s linear 0.6s;
+        	-webkit-transition:opacity 0.4s linear 0.6s;
+        	-o-transition:opacity 0.4s linear 0.6s;
+		}
+	}
+	.mountains{
+		.mountain{
+			width:100%;
+        	position: absolute;
+        	left:0px;
+        	bottom:0px;
+		}
+		.mountain.mountain1{
+			height:10.5em;
+        	background:url("http://upload-images.jianshu.io/upload_images/3257837-fc46d2d944a9eb86.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240") repeat-x;
+        	background-size: auto 100%;
+        	animation:moving 100s linear 0.8s infinite normal none;
+        	overflow: hidden;
+        	z-index: 3
+		}
+		.mountain.mountain2{
+			height:12.5em;
+        	background:url(http://upload-images.jianshu.io/upload_images/3257837-e20ee73ad0a8bc5e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) repeat-x;
+        	background-size: auto 100%;
+        	animation:moving 100s linear 0.8s infinite normal none;
+        	overflow: hidden;
+        	opacity: 0.6;
+        	z-index: 2;
+		}
+		.mountain.mountain3{
+			height:20.5em;
+        	background:url(http://upload-images.jianshu.io/upload_images/3257837-7209744aa107ec15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) repeat-x;
+        	background-size: auto 100%;
+        	animation:moving 100s linear 0.8s infinite normal none;
+        	overflow: hidden;
+        	opacity: 0.4;
+        	z-index:1;
+		}
+	}
+}
+.music-box{
+	display: none;
+	position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -200px;
+    z-index: 100;
+	.musicbox{
+		font-family:microsoft Yahei;
+        -webkit-font-smoothing: antialiased;
+        width: 400px;
+        height:400px;
+        border-radius: 5px;
+        position: relative;
+        background-color: #234;
+		.infobar{
+			height: 30px;
+        	background-color: rgb(131,175,155);
+        	opacity: 0.8;
+        	border-top-left-radius: 5px;
+        	border-top-right-radius: 5px;
+        	line-height: 30px;
+        	color:white;
+        	font-size: 20px;
+        	cursor: pointer;
+			.volume{
+				float: right;
+                margin-top:-2px;
+                margin-right: 10px;
+                width: 0px;
+                height: 20px;
+                transition: 0.7s all;
+				.volume-bar{
+					height: 5px;
+        			margin-top: 15px;
+        			margin-left: 10px;
+        			background-color: #223;
+        			cursor: pointer;
+					.volume-total{}
+					.volume-now{
+						background-color: #ccc;
+        				height: 5px;
+        				width: 50%;
+        				position: relative;
+					}
+				}
+			}
+		}
+        .vidio{
+                line-height: 30px;
+                color:white;
+                font-size: 20px;
+                cursor: pointer;
+                position: absolute;
+                right: 10px;
+                transition: 1.5s all
+            }
+            .like{
+                float: left;
+                margin-left: 10px;
+                line-height: 30px;
+                color:white;
+                font-size: 20px;
+                cursor: pointer
+            }
+		.style{
+			height: 300px;
+        	margin: 0 auto;
+        	position: relative;
+        	background-color:rgba(204,204,204,0.6); 
+			.style-choose{
+				width: 200px;
+            	height: 300px;
+            	overflow:hidden;
+            	position: absolute;
+            	border: 1px solid #ccc;
+            	top: -30px;
+            	left: -210px;
+            	z-index: 6;
+            	border-radius: 5px;
+            	display: none;
+				.style-item{
+					height: 100%;
+            		width: 220px;
+            		overflow-y: auto;
+            		overflow-x: hidden;
+				}
+                ul{
+                    li{
+                        list-style: none;
+                        background-color:rgba(34,51,68,0.2);
+                        height: 30px;
+                        line-height: 30px;
+                        text-align: center;
+                        border-bottom: 1px solid #fff;
+                        cursor:pointer;
+                        color: #fff;
+                    }
+                    li:hover{
+                        background-color:rgb(34,51,68);
+                        transition: 0.5s all;
+                    }
+                }
+			}
+			.Pic{
+				.covers{
+					width: 250px;
+        			height: 250px;
+        			border-radius: 350px;
+        			position: absolute;
+        			background: url("https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2033981058,3643397326&fm=23&gp=0.jpg") 0 0 no-repeat;
+        			background-size: auto 100%;
+        			transform: translate3d(0,0,0);
+        			-webkit-transform: translate3d(0,0,0);
+        			animation: play 3s linear infinite;
+        			-webkit-animation: play 3s linear infinite;
+        			z-index:5;
+        			opacity: 1;
+        			position: absolute;
+        			top: 25px;
+                    left: 50%;
+                    margin-left: -125px;
+				}
+				.play-music{
+					.fa-play{
+						font-family:'iconfont' !important;
+        				position: absolute;
+        				top:120px;
+        				left: 50%;
+        				margin-left: -25px;
+        				z-index: 99;
+        				font-size: 50px;
+        				color: #fff;
+        				cursor: pointer;
+					}
+					.fa-pause{
+						font-family:'iconfont' !important;
+        				position: absolute;
+        				top:120px;
+        				left: 50%;
+        				margin-left: -25px;
+        				z-index: 99;
+        				font-size: 50px;
+        				color: #fff;
+        				cursor: pointer;
+					}
+				}
+			}
+			.pre-style{
+				position: absolute;
+        		font-size: 30px;
+        		cursor: pointer;
+        		color: #fff;
+        		top: 80%;
+        		left: 10px;
+			}
+			.next-style{
+				position: absolute;
+        		font-size: 30px;
+        		cursor: pointer;
+        		color: #fff;
+        		top: 80%;
+        		right: 10px;
+			}
+		}
+		#gc{
+            width: 300px;    
+            height: 300px;
+            border: 1px solid red; 
+            background: transparent;    
+            margin: 100px auto;    
+            color: #fff;    
+            font-size: 18px;    
+            overflow: hidden;    
+            position: relative; 
+            position: absolute;
+            z-index: 999;
+            #gc ul{
+                position: absolute;    
+                top: 200px; 
+                transition: 500ms all;
+                li{
+                    text-align: center;    
+                    height: 40px;    
+                    line-height: 40px;
+                }
+            }
+        }
+		.music{
+			.control{
+				.fa{
+					margin-right: 12px;
+        			cursor: pointer;
+				}
+				.goback{
+					left: 70px;
+					color: #fff;
+        			font-size: 20px;
+        			position: absolute;
+        			top:88%;
+					.fa-step-backward{}
+				}
+				.forward{
+					right: 70px;
+					color: #fff;
+        			font-size: 20px;
+        			position: absolute;
+        			top:88%;
+					.fa-step-forward{}
+				}
+			}
+			.info{
+				color: #fff;
+        		display: block;
+        		cursor: pointer;
+        		margin-top: 60%;
+        		margin: 0 auto;
+        		width: 200px;
+				.title{
+					text-align: center;
+        			margin-top: 5px;
+				}
+				.auther{
+					text-align: center;
+        			margin-top: 5px;}
+			}
+		}
+		.progress{
+			width: 300px;
+        	position: absolute;
+        	top: 390px;
+        	left: 20px;
+        	z-index: 99;
+			.bar{
+				height: 3px;
+        		background-color: rgba(0,0,0,0.2);
+        		cursor: pointer;
+				.progress-total{}
+				.progress-now{
+					background-color: #ccc;
+        			height: 3px;
+        			width: 0;
+        			position: relative;
+				}
+			}
+			.time{
+				text-align: right;
+        		color: #ccc;
+        		position: absolute;
+        		bottom: -5px;
+        		right: -55px;
+			}
+		}
+	}
+}
+.musicbtn{
+	img{
+		width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 80%;
+        left:80%;
+        transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
+        animation: play 3s linear infinite;
+        -webkit-animation: play 3s linear infinite;
+        cursor: pointer;
+        z-index: 199;	
+	}
+}
+@font-face {
+  font-family: 'iconfont';  /* project id 256161 */
+  src: url('http://at.alicdn.com/t/font_dyy3pgxqwvvg3nmi.eot');
+  src: url('http://at.alicdn.com/t/font_dyy3pgxqwvvg3nmi.eot?#iefix') format('embedded-opentype'),
+  url('http://at.alicdn.com/t/font_dyy3pgxqwvvg3nmi.woff') format('woff'),
+  url('http://at.alicdn.com/t/font_dyy3pgxqwvvg3nmi.ttf') format('truetype'),
+  url('http://at.alicdn.com/t/font_dyy3pgxqwvvg3nmi.svg#iconfont') format('svg');
+}
+.iconfont {
+    font-family:"iconfont" !important;/*这样设定的话就会使得所有有class=iconfont的标签的样式改变，所以如果还有些地方需要图标样式发生更改的话，记得要在.iconfont之前加具体的路径*/
+    font-style: normal
+}
+@keyframes bear-run{
+    0%{
+        background-position: 0 0;
+        }
+    12.5%{
+        background-position: -200px 0;
+        }
+    25%{
+        background-position: -400px 0 ;
+        }
+    37.5%{
+        background-position: -600px 0 ;
+     	}
+    50%{
+        background-position: -800px 0 ;
+     	}
+    62.5%{
+        background-position: -1000px 0 ;
+      	}
+    75%{
+        background-position: -1200px 0 ;
+      	}
+    87.5%{
+        background-position: -1400px 0 ;
+      	}
+    100%{
+        background-position: 0 0;
+      	}
+}
+@-webkit-keyframes bear-run{
+    0%{
+        background-position: 0 0;
+     	}
+    12.5%{
+        background-position: -200px 0;
+      	}
+    25%{
+        background-position: -400px 0 ;
+    	}
+    37.5%{
+        background-position: -600px 0 ;
+     	}
+    50%{
+        background-position: -800px 0 ;
+    	}
+    62.5%{
+        background-position: -1000px 0 ;
+    	}
+    75%{
+        background-position: -1200px 0 ;
+      	}
+    87.5%{
+        background-position: -1400px 0 ;
+      	}
+    100%{
+        background-position: 0 0;
+      	}
+}
+@keyframes moving{
+    0%{
+        background-position: 0 0;
+     	}
+    12.5%{
+        background-position: -240px 0;
+      	}
+    25%{
+        background-position: -480px 0 ;
+        }
+    37.5%{
+        background-position: -720px 0 ;
+     	}
+   	50%{
+        background-position: -960px 0 ;
+     	}
+    62.5%{
+        background-position: -1200px 0 ;
+     	}
+    75%{
+        background-position: -1440px 0 ;
+     	}
+    87.5%{
+        background-position: -1680px 0 ;
+     	}
+    100%{
+        background-position: -1920px 0;
+     	}
+}
+@-webkit-keyframes play{
+    0%{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    	}
+    100%{
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    	}
+}

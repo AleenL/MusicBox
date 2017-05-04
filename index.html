@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <meta name="referrer" content="never">
+	<link rel="stylesheet" href="src/css/style.css" type="text/css" />
+</head>
+<body>
+<div class="back">
+    <div class="start">
+    </div>
+    <div class="moon"></div>
+    <div class="musicbtn">
+    <img src="src/img/music.png">
+    </div>
+	<div class="back-ground">
+		<div id="bear" class="bear running"></div>
+	</div>
+    <div class="mountains">
+        <div class="mountain mountain1"></div>
+        <div class="mountain mountain2"></div>
+        <div class="mountain mountain3"></div>
+    </div>
+</div>
+<div class="music-box">
+    <div class="musicbox">
+        <div class="infobar">
+        <div class="volume">
+            <div class="volume-bar">
+                <div class="volume-total"></div>
+                <div class="volume-now"></div>
+            </div>
+        </div>
+        <p class="vidio iconfont fa-unmuted">&#xe6be;</p>
+        <p class="like iconfont">&#xe699;</p>
+        </div>
+        <div class="style">
+        <div class="style-choose">
+           <ul class="style-items">
+                
+            </ul>
+        </div>
+        <div class="Pic">
+            <div class="covers">
+            </div>
+            <div class="play-music">
+            <i class="fa fa-play iconfont">&#xe600;</i>
+            </div>
+        </div>
+        <div>
+            <i class="pre-style iconfont">&#xe648;</i>
+            <i class="next-style iconfont">&#xe779;</i> 
+        </div>
+        </div>
+        <div id="gc">    
+            <ul></ul>    
+        </div> 
+        <div class="music">
+        <div class="control">
+            <span class="goback">
+                <i class="fa fa-step-backward iconfont">&#xe647;</i>
+            </span>
+            <span class="forward">
+                <i class="fa fa-step-forward iconfont">&#xe646;</i>
+            </span>
+        </div>
+        <div class="info ">
+            <div class="title">My songs</div>
+            <div class="auther">Aleen</div>
+        </div>
+        </div>
+        <div class="progress">
+            <div class="bar">
+                <div class="progress-total"></div>
+                <div class="progress-now"></div>
+            </div>
+            <div class="time">0:00</div>
+        </div>
+    </div>
+</div>
+<script src='src/js/lib/bower_comonents/requirejs/require.js'></script>
+<script>
+    requirejs.config({
+    baseUrl:'src/js',
+    paths:{
+        'jquery':'lib/bower_comonents/jquery/dist/jquery-3.2.1.min'
+    }
+});
+
+requirejs(['app/index'])
+</script>
+</body>
+</html>
