@@ -181,7 +181,7 @@ define(['jquery'],function($){
 		var _this = this
 			_this.$musicList = []
 		for(var i=0;i<10;i++){	
-			this.get('http://api.jirengu.com/fm/getSong.php',{channel:channels},function(ret){
+			this.get('https://jirenguapi.applinzi.com/fm/getSong.php',{channel:channels},function(ret){
 				var addmusic = [{'src':ret.song[0].url,'title':ret.song[0].title,'auther':ret.song[0].artist,'pic':ret.song[0].picture,'lrc':ret.song[0].lrc}]
 				_this.$musicList.push(addmusic[0])	
 			})
@@ -193,7 +193,7 @@ define(['jquery'],function($){
 			if(_this.$musicList.length!==10){
 				laod()
 			}
-		} ,1000)
+		} ,2000)
 		function laod(){
 			setTimeout(function(){
 					
@@ -241,7 +241,7 @@ define(['jquery'],function($){
 
 	_Playmusic.prototype.styleList = function(){
 		var _this = this;
-		this.get('http://api.jirengu.com/fm/getChannels.php', {}, function(ret){
+		this.get('https://jirenguapi.applinzi.com/fm/getChannels.php', {}, function(ret){
       		_this.renderSet(ret.channels)
     	})
 	}
