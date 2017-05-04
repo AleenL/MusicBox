@@ -357,20 +357,6 @@ div {
   cursor: pointer;
   z-index: 199;
 }
-@font-face {
-  font-family: 'iconfont';
-  /* project id 256161 */
-  src: url('iconfont.eot');
-  src: url('iconfont.eot') format('embedded-opentype'), 
-  url('iconfont.woff') format('woff'), 
-  url('iconfont.ttf') format('truetype'), 
-  url('iconfont.svg') format('svg');
-}
-.iconfont {
-  font-family: "iconfont" !important;
-  /*这样设定的话就会使得所有有class=iconfont的标签的样式改变，所以如果还有些地方需要图标样式发生更改的话，记得要在.iconfont之前加具体的路径*/
-  font-style: normal;
-}
 @keyframes bear-run {
   0% {
     background-position: 0 0;
