@@ -87,7 +87,7 @@ define(['jquery'],function($){
 				_this.musicIndex++
 				_this.loadMusic(_this.$musicList[_this.musicIndex])
 				$('#gc ul').empty()
-				_this.getLrc(_this.$musicList[_this.musicIndex].lrc)
+				
 			}else{
 				alert("已经到最后了")
 				_this.musicIndex=9
@@ -97,13 +97,12 @@ define(['jquery'],function($){
 		this.$backBtn.on('click',function(){
 			if(_this.musicIndex==0){
 				_this.loadMusic(_this.$musicList[_this.musicIndex])
-				$('#gc ul').empty()
-				_this.getLrc(_this.$musicList[_this.musicIndex].lrc)
+				
 			}else{
 				_this.musicIndex --
 				_this.loadMusic(_this.$musicList[_this.musicIndex])
 				$('#gc ul').empty()
-				_this.getLrc(_this.$musicList[_this.musicIndex].lrc)
+				
 			}
 		})
 		_this.styleList()
@@ -111,13 +110,12 @@ define(['jquery'],function($){
 		_this.updateProgress()
 	}
 
-	_Playmusic.prototype.getLrc  = function(lrcUrl){
+	_Playmusic.prototype.getLrc  = function(sid){
 		var _this = this;
-		this.get(lrcUrl,{},function(ret){
-    		_this.parseLyric(ret)
-    		},'text')
+		this.get('https://jirenguapi.applinzi.com/fm/getLyric.php',{sid:sid},function(ret){
+			_this.parseLyric(ret.lyric)
+    		})
 		}
-
 	_Playmusic.prototype.parseLyric = function(lyric){
 		var lines = lyric.split('\n'),
 	        pattern = /\[\d{2}:\d{2}.\d{2}\]/g,
@@ -125,9 +123,8 @@ define(['jquery'],function($){
 	    while (!pattern.test(lines[0])) {
 	        lines = lines.slice(1);
 	    }
-
+	    console.log(lines)
 	    lines[lines.length - 1].length === 0 && lines.pop()
-
 	    lines.forEach(function(v,i,a){
 	    	var time = v.match(pattern),
 	    		value = v.replace(pattern,'')
@@ -182,14 +179,13 @@ define(['jquery'],function($){
 			_this.$musicList = []
 		for(var i=0;i<10;i++){	
 			this.get('https://jirenguapi.applinzi.com/fm/getSong.php',{channel:channels},function(ret){
-				var addmusic = [{'src':ret.song[0].url,'title':ret.song[0].title,'auther':ret.song[0].artist,'pic':ret.song[0].picture,'lrc':ret.song[0].lrc}]
+				var addmusic = [{'sid':ret.song[0].sid,'src':ret.song[0].url,'title':ret.song[0].title,'auther':ret.song[0].artist,'pic':ret.song[0].picture,'lrc':ret.song[0].lrc}]
 				_this.$musicList.push(addmusic[0])	
 			})
 		}
 		setTimeout(function(){
 			_this.loadMusic(_this.$musicList[0])
 			$('#gc ul').empty()
-			_this.getLrc(_this.$musicList[0].lrc)
 			if(_this.$musicList.length!==10){
 				laod()
 			}
@@ -215,7 +211,7 @@ define(['jquery'],function($){
 	}
 
 	_Playmusic.prototype.loadMusic = function(songObj){
-		
+		this.getLrc(songObj.sid)
 		this.music.src = songObj.src
 		this.$titleNode.text(songObj.title)
 		this.$authorNode.text(songObj.auther)
