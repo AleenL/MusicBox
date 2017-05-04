@@ -26,7 +26,7 @@ div {
 }
 .back .start {
   height: 100vh;
-  background: url(http://upload-images.jianshu.io/upload_images/3257837-f1b71ce65b853d3a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) repeat-x;
+  background: url(https://upload-images.jianshu.io/upload_images/3257837-f1b71ce65b853d3a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) repeat-x;
   background-size: 100% 100%;
   animation: moving 100s linear 0.8s infinite normal none;
   overflow: hidden;
@@ -63,7 +63,7 @@ div {
   position: absolute;
   margin-left: -3.125em;
   z-index: 999;
-  background: url("http://upload-images.jianshu.io/upload_images/3257837-e40a2c0d9c65dbc1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240") 0 0 no-repeat;
+  background: url("https://upload-images.jianshu.io/upload_images/3257837-e40a2c0d9c65dbc1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240") 0 0 no-repeat;
   background-size: 100em 100%;
   opacity: 1;
   transition: opacity 0.4s linear 0.6s;
@@ -79,7 +79,7 @@ div {
 }
 .back .mountains .mountain.mountain1 {
   height: 10.5em;
-  background: url("http://upload-images.jianshu.io/upload_images/3257837-fc46d2d944a9eb86.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240") repeat-x;
+  background: url("https://upload-images.jianshu.io/upload_images/3257837-fc46d2d944a9eb86.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240") repeat-x;
   background-size: auto 100%;
   animation: moving 100s linear 0.8s infinite normal none;
   overflow: hidden;
@@ -87,7 +87,7 @@ div {
 }
 .back .mountains .mountain.mountain2 {
   height: 12.5em;
-  background: url(http://upload-images.jianshu.io/upload_images/3257837-e20ee73ad0a8bc5e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) repeat-x;
+  background: url(https://upload-images.jianshu.io/upload_images/3257837-e20ee73ad0a8bc5e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) repeat-x;
   background-size: auto 100%;
   animation: moving 100s linear 0.8s infinite normal none;
   overflow: hidden;
@@ -96,7 +96,7 @@ div {
 }
 .back .mountains .mountain.mountain3 {
   height: 20.5em;
-  background: url(http://upload-images.jianshu.io/upload_images/3257837-7209744aa107ec15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) repeat-x;
+  background: url(https://upload-images.jianshu.io/upload_images/3257837-7209744aa107ec15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) repeat-x;
   background-size: auto 100%;
   animation: moving 100s linear 0.8s infinite normal none;
   overflow: hidden;
