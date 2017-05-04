@@ -171,6 +171,7 @@ define(['jquery'],function($){
 			if(e.target.tagName.toLowerCase()!=='li') return;
 			var channelId = ($(e.target).attr('data-channel-id'))
 			_this.getmusic(channelId)
+			_this.musicIndex=0;
 		})
 	}
 
