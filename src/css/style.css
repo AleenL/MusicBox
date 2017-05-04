@@ -360,8 +360,11 @@ div {
 @font-face {
   font-family: 'iconfont';
   /* project id 256161 */
-  src: url('https://at.alicdn.com/t/font_dyy3pgxqwvvg3nmi.eot');
-  src: url('https://at.alicdn.com/t/font_dyy3pgxqwvvg3nmi.eot?#iefix') format('embedded-opentype'), url('http://at.alicdn.com/t/font_dyy3pgxqwvvg3nmi.woff') format('woff'), url('http://at.alicdn.com/t/font_dyy3pgxqwvvg3nmi.ttf') format('truetype'), url('http://at.alicdn.com/t/font_dyy3pgxqwvvg3nmi.svg#iconfont') format('svg');
+  src: url('iconfont.eot');
+  src: url('iconfont.eot') format('embedded-opentype'), 
+  url('iconfont.woff') format('woff'), 
+  url('iconfont.ttf') format('truetype'), 
+  url('iconfont.svg') format('svg');
 }
 .iconfont {
   font-family: "iconfont" !important;
