@@ -128,6 +128,7 @@ define(['jquery'],function($){
 	    lines.forEach(function(v,i,a){
 	    	var time = v.match(pattern),
 	    		value = v.replace(pattern,'')
+	    	if(time == null) return;
 	    	time.forEach(function(v1,i1,a1){
 	    		var t = v1.slice(1,-1).split(':')
 	    		result.push([parseInt(t[0], 10) * 60 + parseFloat(t[1]), value])
