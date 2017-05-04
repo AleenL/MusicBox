@@ -26,7 +26,7 @@ define(['jquery'],function($){
 	_Musicstyle.prototype.bind = function(){
 		var	color = false,
 			musicvolume = false,
-			style = false,
+			style = true
 			lrcstyle=false
 
 		this.$setVolume.on('mouseover',function(e){
